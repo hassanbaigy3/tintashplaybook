@@ -1,8 +1,8 @@
 import React from 'react'
 import PropType from 'prop-types'
 import styles from './modal.module.css'
-import { useEffect, useRef,useState } from 'react';
-import onClickOutside from 'react-onclickoutside'
+import { useState } from 'react';
+
 
 function Modal({show , onClose,childern,backdropStyles , modalStyles}) {
     const [isOpen, setIsOpen] = useState(false);
@@ -20,10 +20,6 @@ function Modal({show , onClose,childern,backdropStyles , modalStyles}) {
         </>   
     )
 }
-const clickOutsideConfig = {
-    handleClickOutside: () => {Modal.handleClickOutside}
-    
-  };
 
 Modal.prototypes={
     show:PropType.bool.isRequired,
@@ -33,4 +29,4 @@ Modal.prototypes={
     modalStyles:PropType.object
 }
 
-export default onClickOutside(Modal, clickOutsideConfig);
+export default Modal
