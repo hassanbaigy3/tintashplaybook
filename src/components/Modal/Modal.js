@@ -4,26 +4,27 @@ import styles from './modal.module.css'
 
 
 
-function Modal({show , onClose,childern,backdropStyles , modalStyles}) {
+function Modal({ show, onClose, children, backdropStyles, modalStyles }) {
+    console.log(children);
     return (
         <>
-        <div className={styles.backdrop} style={{...backdropStyles}}>
-            <div className={styles.modal} style={{...modalStyles}}>
-                <div className={styles.modalContent}>
-                    {childern}
+            <div className={styles.backdrop} style={{ ...backdropStyles }}>
+                <div className={styles.modal} style={{ ...modalStyles }}>
+                    <div className={styles.modalContent}>
+                        {children}
+                    </div>
                 </div>
             </div>
-        </div>
-        </>   
+        </>
     )
 }
 
-Modal.prototypes={
-    show:PropType.bool.isRequired,
-    onClose:PropType.func.isRequired,
-    childern:PropType.node.isRequired,
-    backdropStyles:PropType.object,
-    modalStyles:PropType.object
+Modal.prototypes = {
+    show: PropType.bool.isRequired,
+    onClose: PropType.func.isRequired,
+    children: PropType.node.isRequired,
+    backdropStyles: PropType.object,
+    modalStyles: PropType.object
 }
 
 export default Modal
