@@ -1,6 +1,6 @@
 import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import { useState , useRef} from 'react';
+import { useState} from 'react';
 import Modal from './components/Modal/Modal'
 
 
