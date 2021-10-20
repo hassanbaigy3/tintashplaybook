@@ -1,26 +1,30 @@
 .App {
-  font-family: 'Teko', sans-serif;
+  font-family: 'Lato', 'Verdana', sans-serif;
 }
 
 nav {
- display: flex;
- justify-content: space-around;
- align-items: center;
- min-height: 10vh;
- background: lightblue;
- 
-}
-.nav-links{
-display: flex;
-width: 50%;
-justify-content: space-around;
-align-items: center;
-list-style: none;
-}
-.contaier-playbook{
-text-align: center;
-
-justify-content: space-around;
-box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background: lightblue;
 }
 
+.nav-links {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+.container-playbook {
+  text-align: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+
+.expanded-content {
+  padding-top: 20px;
+  background-color: rgba(49, 0, 0, 0.199);
+  transition: all 1s;
+}
